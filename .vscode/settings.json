@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "testFoam.C": "cpp",
+        "customSolver02Foam.C": "cpp",
+        "readtransportproperties.h": "c",
+        "customsolver01foam.h": "c",
+        "customSolver01Foam.H": "cpp",
+        "readTransportProperties.H": "cpp"
+    }
+}

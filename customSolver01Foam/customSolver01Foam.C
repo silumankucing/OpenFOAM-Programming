@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
         Info<< "Time = " << runTime.timeName() << nl << endl;
 
         #include "readTransportProperties.H"
-        #include "test-solver.H"
+        #include "customSolver01Foam.H"
 
         runTime.write();
 

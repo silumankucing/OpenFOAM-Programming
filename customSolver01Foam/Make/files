@@ -1,0 +1,3 @@
+customSolver01Foam.C
+
+EXE = $(FOAM_APPBIN)/customSolver01Foam
