@@ -1,21 +1,31 @@
 #include "fvCFD.H"
+#include "singlePhaseTransportModel.H"
+#include "simpleControl.H"
+#include "fvOptions.H"
 
 int main(int argc, char *argv[])
 {
+    #include "postProcess.H"
+
     #include "setRootCaseLists.H"
     #include "createTime.H"
     #include "createMesh.H"
+    #include "createControl.H"
     #include "createFields.H"
+    #include "initContinuityErrs.H"
 
-    Info<< "\nCalculating scalar transport\n" << endl;
+    Info<< "\nStarting simulation\n" << endl;
 
-    while (runTime.loop())
+    while (simple.loop(runTime))
     {
         Info<< "Time = " << runTime.timeName() << nl << endl;
 
-        #include "readTransportProperties.H"
-        #include "customSolver01Foam.H"
+        {
+            #include "UEqn.H"
+            #include "pEqn.H"
+        }
 
+        laminarTransport.correct();
         runTime.write();
 
         Info<< "ExecutionTime = " << runTime.elapsedCpuTime() << " s"
@@ -23,7 +33,7 @@ int main(int argc, char *argv[])
             << nl << endl;
     }
 
-    Info<< "End\n" << endl;
+    Info<< "End of simulation\n" << endl;
 
     return 0;
 }

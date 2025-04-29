@@ -10,8 +10,6 @@
 #include "fvCFD.H"
 #include "pisoControl.H"
 
-// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
-
 int main(int argc, char *argv[])
 {
     argList::addNote
@@ -21,7 +19,6 @@ int main(int argc, char *argv[])
     );
 
     #include "postProcess.H"
-
     #include "addCheckCaseOptions.H"
     #include "setRootCaseLists.H"
     #include "createTime.H"

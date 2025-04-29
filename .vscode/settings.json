@@ -5,6 +5,13 @@
         "readtransportproperties.h": "c",
         "customsolver01foam.h": "c",
         "customSolver01Foam.H": "cpp",
-        "readTransportProperties.H": "cpp"
+        "readTransportProperties.H": "cpp",
+        "customSolver01Foam.C": "cpp",
+        "customSolver03Foam.C": "cpp",
+        "passiveScalarFoam.C": "cpp",
+        "customIcoFoam.C": "cpp",
+        "simpleFoamTemp.C": "cpp",
+        "simpleTempFoam.C": "cpp",
+        "flowSSFoam.C": "cpp"
     }
 }
