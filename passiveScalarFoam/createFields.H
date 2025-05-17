@@ -1,3 +1,5 @@
+#include "createPhi.H"
+
 Info<< "Reading transportProperties\n" << endl;
 
 IOdictionary transportProperties
@@ -60,10 +62,6 @@ volScalarField s
     ),
     mesh
 );
-
-
-#include "createPhi.H"
-
 
 label pRefCell = 0;
 scalar pRefValue = 0.0;
